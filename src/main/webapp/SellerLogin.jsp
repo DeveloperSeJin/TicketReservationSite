@@ -12,6 +12,7 @@
   <script src="https://code.jquery.com/jquery-3.3.7.min.js"></script>
   <script src ="js/bootstrap.js"></script>
   <nav class="navbar navbar-default">
+  	<nav class="navbar navbar-default">
   	<div class="navbar-header">
   		<button type="button" class="navbar-toggle collapsed"
   			data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
@@ -47,8 +48,8 @@
   	<div class="col-lg-4"></div>
   	<div class="col-lg-4">
   		<div class="jumbotron" style="padding-top: 20px;">
-  			<form method="post" action="LoginAction.jsp">
-  				<h3 style="text-align: center;">로그인 화면</h3>
+  			<form method="post" action="SellerLoginAction.jsp">
+  				<h3 style="text-align: center;">판매자 로그인 화면</h3>
   				<div class="form-group">
   					<input type="text" class="form-control" placeholder="아이디" name="ID" maxlength="20">
   				</div>

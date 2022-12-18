@@ -1,40 +1,49 @@
 package user;
 
 public class User {
-	private String userID;
-	private String userPassword;
-	private String userName;
-	private String userGender;
-	private String userEmail;
+	private String ID;
+	private String password;
+	private String name;
+	private String email;
+	private String phonenumber;
+	private String company;
 	
-	public String getUserID() {
-		return userID;
+	public String getID() {
+		return ID;
 	}
-	public void setUserID(String userID) {
-		this.userID = userID;
+	public void setID(String iD) {
+		ID = iD;
 	}
-	public String getUserPassword() {
-		return userPassword;
+	public String getPassword() {
+		return password;
 	}
-	public void setUserPassword(String userPassword) {
-		this.userPassword = userPassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getUserGender() {
-		return userGender;
+	public String getEmail() {
+		return email;
 	}
-	public void setUserGender(String userGender) {
-		this.userGender = userGender;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public String getUserEmail() {
-		return userEmail;
+	public String getPhonenumber() {
+		return phonenumber;
 	}
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
 	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	
+
 }

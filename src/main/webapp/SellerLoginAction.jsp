@@ -15,11 +15,11 @@
 <body>
 	<%
 		UserDAO userDAO = new UserDAO();
-		int result = userDAO.login(user.getID(), user.getPassword(), "user");
+		int result = userDAO.login(user.getID(), user.getPassword(), "seller");
 
 		if (result == 1) {
 			session.setAttribute("ID", user.getID());
-			session.setAttribute("type", "user");
+			session.setAttribute("type", "seller");
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("location.href = 'main.jsp'");
