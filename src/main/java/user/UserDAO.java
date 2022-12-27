@@ -50,20 +50,28 @@ public class UserDAO {
 	
 	public int join(User user) {
 		String SQL = "INSERT INTO seller VALUES (?, ?, ?, ?, ?, ?)";
-		System.out.println(user.getID());
-		System.out.println(user.getPassword());
-		System.out.println(user.getEmail());
-		System.out.println(user.getName());
-		System.out.println(user.getPhonenumber());
-		System.out.println(user.getCompany());
 		try {
 			psmt = conn.prepareStatement(SQL);
 			psmt.setString(1, user.getID());
 			psmt.setString(2, user.getPassword());
 			psmt.setString(3, user.getEmail());
 			psmt.setString(4, user.getName());
-			psmt.setString(5, user.getPhonenumber());
-			psmt.setString(6, user.getCompany());
+			return psmt.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
+	public int join(Seller seller) {
+		String SQL = "INSERT INTO seller VALUES (?, ?, ?, ?, ?, ?)";
+		try {
+			psmt = conn.prepareStatement(SQL);
+			psmt.setString(1, seller.getID());
+			psmt.setString(2, seller.getPassword());
+			psmt.setString(3, seller.getEmail());
+			psmt.setString(4, seller.getName());
+			psmt.setString(5, seller.getPhonenumber());
+			psmt.setString(6, seller.getCompany());
 			return psmt.executeUpdate();
 		} catch(Exception e) {
 			e.printStackTrace();

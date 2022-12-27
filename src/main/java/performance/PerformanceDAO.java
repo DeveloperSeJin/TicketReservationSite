@@ -53,18 +53,20 @@ public class PerformanceDAO {
 	  }
 
 	  public int write(String location, String mainImg, String posterImg,
-			  				String contentImg, String performanceDate, String company) {
-	  	String SQL = "INSERT INTO performance VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+			  				String contentImg, String performanceDate, String sellerID, String title, String content) {
+	  	String SQL = "INSERT INTO performance VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	  	try {
 	  		PreparedStatement pstmt = conn.prepareStatement(SQL);
 	  		pstmt.setInt(1, getNext());
 	  		pstmt.setString(2, location);
-	  		pstmt.setString(3, mainImg);
+	  		pstmt.setString(3, mainImg);									
 	  		pstmt.setString(4, posterImg);
 	  		pstmt.setString(5, contentImg);
 	  		pstmt.setInt(6, 1);
 	  		pstmt.setString(7, performanceDate);
-	  		pstmt.setString(8, company);
+	  		pstmt.setString(8, title);
+	  		pstmt.setString(9, content);
+	  		pstmt.setString(10, sellerID);
 
 	  		return pstmt.executeUpdate();
 	  	} catch(Exception e) {

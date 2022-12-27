@@ -3,13 +3,13 @@
 <%@ page import="user.UserDAO" %>
 <%@ page import="java.io.PrintWriter" %>
 <% request.setCharacterEncoding("UTF-8"); %>
-<jsp:useBean id="user" class="user.User" scope="page" />
-<jsp:setProperty name="user" property="ID" />
-<jsp:setProperty name="user" property="password" />
-<jsp:setProperty name="user" property="name" />
-<jsp:setProperty name="user" property="phonenumber" />
-<jsp:setProperty name="user" property="email" />
-<jsp:setProperty name="user" property="company" />
+<jsp:useBean id="seller" class="user.Seller" scope="page" />
+<jsp:setProperty name="seller" property="ID" />
+<jsp:setProperty name="seller" property="password" />
+<jsp:setProperty name="seller" property="name" />
+<jsp:setProperty name="seller" property="phonenumber" />
+<jsp:setProperty name="seller" property="email" />
+<jsp:setProperty name="seller" property="company" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +18,8 @@
 </head>
 <body>
 	<%
-		if (user.getID() == null || user.getPassword() == null || user.getName() == null
-			|| user.getPhonenumber() == null || user.getEmail() == null || user.getCompany() == null) {
+		if (seller.getID() == null || seller.getPassword() == null || seller.getName() == null
+			|| seller.getPhonenumber() == null || seller.getEmail() == null || seller.getCompany() == null) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('입력이 안된 사항이 있습니다.')");
@@ -27,7 +27,7 @@
 			script.println("</script>");
 		} else {
 			UserDAO userDAO = new UserDAO();
-			int result = userDAO.join(user);
+			int result = userDAO.join(seller);
 			if (result == -1) {
 				PrintWriter script = response.getWriter();
 				script.println("<script>");

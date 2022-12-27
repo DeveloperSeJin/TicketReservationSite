@@ -1,10 +1,12 @@
 package user;
 
-public class User {
+public class Seller {
 	private String ID;
 	private String password;
 	private String name;
 	private String email;
+	private String phonenumber;
+	private String company;
 	
 	public String getID() {
 		return ID;
@@ -29,5 +31,19 @@ public class User {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}	
+	}
+	public String getPhonenumber() {
+		return phonenumber;
+	}
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	
+
 }
